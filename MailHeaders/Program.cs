@@ -98,7 +98,7 @@ namespace MailHeaders
 
         private static void LogProgress(int current, int total)
         {
-            var progress = Math.Round(decimal.Divide(current, total), 1, MidpointRounding.AwayFromZero) * 100;
+            var progress = Math.Round(decimal.Divide(current, total) * 100, 1, MidpointRounding.AwayFromZero);
             Console.Write($"\r{progress}% [{current}/{total}]          ");
         }
 
